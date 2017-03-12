@@ -1,0 +1,73 @@
+{
+  "name": "FEZ",
+  "authors": [
+    "zhaohuijian <zhaohuijian@jd.com>"
+  ],
+  "description": "Bower第三方工具库自动化管理",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.1.4",
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "jquery.easing": "jquery-easing-original#^1.4.1",
+    "jquery.stellar": "stellar#^0.6.2",
+    "owl.carousel": "^2.2.0",
+    "jquery-countTo": "^1.2.0",
+    "modernizr": "^3.3.1",
+    "animate.css": "animate-css#^3.5.2",
+    "prism": "Prism#^1.6.0",
+    "simple-line-icons": "^2.4.1"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "dist/css/bootstrap.css",
+        "dist/js/bootstrap.js",
+        "dist/fonts/**.*"
+      ]
+    },
+    "font-awesome": {
+      "main": [
+        "css/font-awesome.css",
+        "fonts/FontAwesome.otf",
+        "fonts/fontawesome-webfont.eot",
+        "fonts/fontawesome-webfont.svg",
+        "fonts/fontawesome-webfont.ttf",
+        "fonts/fontawesome-webfont.woff",
+        "fonts/fontawesome-webfont.woff2"
+      ]
+    },
+    "vue": {
+      "main": [
+        "dist/vue.js"
+      ]
+    },
+    "owl.carousel": {
+      "main": [
+        "dist/owl.carousel.js",
+        "dist/assets/owl.carousel.css",
+        "dist/assets/owl.theme.default.css"
+      ]
+    },
+    "simple-line-icons": {
+      "main": [
+        "css/simple-line-icons.css",
+        "fonts/Simple-Line-Icons.eot",
+        "fonts/Simple-Line-Icons.svg",
+        "fonts/Simple-Line-Icons.ttf",
+        "fonts/Simple-Line-Icons.woff",
+        "fonts/Simple-Line-Icons.woff2"
+      ]
+    }
+  }
+}
