@@ -1,6 +1,26 @@
-# 说明
-[FEZ](http://fez.hestudy.com)官网网站源码
+# FEZ官方网站
 
-# 运行
-此项目研发需要[fez](https://github.com/furic-zhao/fez)构建工具，请下下载[fez](https://github.com/furic-zhao/fez)，并把此项目 clone 到 fez 构建工具所在目录，然后进入 fez-web 目录执行 `gulp` 
+本项目是[FEZ官方网站源码](http://fez.hestudy.com)
+
+### 源码说明
+运行本项目需要[fez模块工程构建工具](https://github.com/furic-zhao/fez)，并把此项目 clone 到 fez 构建工具所在目录
+
+### 运行
+- 安装 FEZ 后进入 fez-web 目录
+
+#### 研发任务
+
+````bash
+gulp
+````
+
+#### 生产任务
+
+````bash
+gulp dist
+````
+
+
+
+
 
