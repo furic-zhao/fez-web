@@ -904,8 +904,6 @@ a:focus {
             background: #535659;
             position: absolute;
             left: 0;
-            -webkit-transition: 0.2s;
-            -o-transition: 0.2s;
             transition: 0.2s;
         }
         &:before {
@@ -948,6 +946,7 @@ a:focus {
 .js .to-animate-3,
 .js .single-animate {
     opacity: 0;
+    opacity: 1\9\0!important; /*ie9 hack*/
 }
 
 .fez-animated {

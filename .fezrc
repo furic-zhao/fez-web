@@ -50,10 +50,10 @@
      * 生产环境 上传sftp服务器配置信息
      */
     "sftp": {
-        "host": "xxx.xxx.xxx.xxx",
+        "host": "123.57.34.37",
         "port": "22",
         "user": "root",
-        "password": "",
+        "password": "zhj13811869208B",
         "remotePath": "/var/www/html/fez-hestudy-com",
         "includeHtml": true //是否包含 html 文件
     },
