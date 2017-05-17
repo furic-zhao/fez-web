@@ -114,3 +114,11 @@ $(function() {
     parallax();
     navigationSection();
 });
+
+var _hmt = _hmt || [];
+(function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?3964428bb56a8f0685d39fafdcf57693";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+})();
