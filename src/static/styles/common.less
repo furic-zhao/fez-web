@@ -42,7 +42,7 @@ a:focus {
     letter-spacing: 2px;
     transition: 0.3s;
     &.btn-primary {
-        background: #00ADB5;
+        background: #3c8dbc;
         color: #fff;
         border: none !important;
         border: 2px solid transparent !important;
@@ -50,7 +50,7 @@ a:focus {
         &:active,
         &:focus {
             box-shadow: none;
-            background: #00ADB5;
+            background: #63a4c9;
         }
     }
     &.btn-default {
@@ -63,7 +63,7 @@ a:focus {
     &:hover,
     &:focus,
     &:focus {
-        background: #31708f !important;
+        background: #63a4c9 !important;
         color: #fff;
         outline: none !important;
     }
@@ -242,37 +242,40 @@ a:focus {
         border: transparent;
         background: #fff;
         margin: 0;
-        padding-left: 50px;
-        padding-right: 50px;
+        padding-left: 15px;
+        padding-right: 15px;
         border-radius: 0px;
     }
     .navbar-brand {
-        float: left;
         display: block;
         font-size: 24px;
         font-weight: 700;
-        padding-left: 28px;
+        padding: 5px 5px;
         color: #535659;
         text-transform: uppercase;
         letter-spacing: 3px;
         position: relative;
-        &:after,
-        &:before {
-            content: "";
-            position: absolute;
-            display: block;
-            width: 24px;
-            height: 24px;
-            background: rgba(0, 188, 212, 0.75);
-            left: -12px;
-            margin-left: 0px;
-            bottom: 16px;
-            border-radius: 50%;
+        svg{
+              width: 80px;
+    height: 40px;
         }
-        &:before {
-            left: 0px;
-            background: rgba(255, 87, 34, 0.75);
-        }
+        // &:after,
+        // &:before {
+        //     content: "";
+        //     position: absolute;
+        //     display: block;
+        //     width: 24px;
+        //     height: 24px;
+        //     background: rgba(0, 188, 212, 0.75);
+        //     left: -12px;
+        //     margin-left: 0px;
+        //     bottom: 16px;
+        //     border-radius: 50%;
+        // }
+        // &:before {
+        //     left: 0px;
+        //     background: rgba(255, 87, 34, 0.75);
+        // }
         > span {
             color: #FA5555;
         }
@@ -282,7 +285,7 @@ a:focus {
 @media screen and (max-width:992px) {
     #fez-header {
         .navbar-brand {
-            padding-left: 55px !important;
+            padding-left: 15px !important;
             padding-right: 0 !important;
             &:after,
             &:before {
@@ -392,7 +395,7 @@ a:focus {
         }
         h2 {
             color: rgba(255, 255, 255, 0.8);
-            margin: 0 0 60px 0;
+            margin: 0 0 30px 0;
         }
         .call-to-action {
             display: block;
@@ -405,7 +408,7 @@ a:focus {
                 border-radius: 4px;
                 &.download {
                     border: 2px solid #00ADB5;
-                    background: #00ADB5;
+                    background: #3c8dbc;
                     text-decoration: none !important;
                 }
             }
@@ -436,8 +439,8 @@ a:focus {
  */
 
 .getting-started {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    // margin-top: 50px;
+    // margin-bottom: 50px;
     background-image: url(../images/index/bt/bg.jpg);
     background-color: #f2f2f2;
     // background-size: 100% auto;
@@ -725,8 +728,9 @@ a:focus {
 .section-heading {
     float: left;
     width: 100%;
-    // padding-bottom: 50px;
-    margin-bottom: 0px;
+    padding-top:20px;
+    padding-bottom: 30px;
+    // margin-bottom: 0px;
     h2 {
         color: #333;
         text-transform: uppercase;
@@ -783,9 +787,9 @@ a:focus {
     color: rgba(255, 255, 255, 0.9);
     text-shadow: 0px 0px 2px #000;
     .fez-footer-bg {
-        background-image: url(../images/index/footer.jpg);
+        background-image: url(../images/index/footer.png);
         background-color: #181e2c;
-        background-size: 100% auto;
+        background-size: auto 100%;
         background-position: center bottom;
         background-repeat: no-repeat;
         padding-bottom: 60px;

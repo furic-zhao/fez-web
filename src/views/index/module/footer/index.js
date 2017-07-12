@@ -29,5 +29,12 @@ var footerAnimate = function() {
 };
 export default () => {
 	$("#fez-footer").html(temp());
+  $('#js-open-weixin').popover({
+    trigger:'hover',
+    html:'true',
+    placement:'top',
+    content:'<image src="./static/images/wxcode.jpg" width="240" height="300">',
+    title:'微信扫码加入FEZ沟通群',
+  });
 	footerAnimate();
 }

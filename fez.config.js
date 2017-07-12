@@ -22,10 +22,10 @@ export default {
     },
 
     sftp: {
-        host: "xxx.xxx.xxx.xxx",
+        host: "47.93.4.1",
         port: "22",
         user: "root",
-        password: "password",
+        password: "zhj13811869208B*!",
         remotePath: "/data/wwwroot/fez.hestudy.com",
         includeHtml: true
     },
@@ -49,5 +49,9 @@ export default {
         },
 
         views: true
+    },
+    svgSymbol: {
+        available: true,
+        autoInject: true
     }
 }
