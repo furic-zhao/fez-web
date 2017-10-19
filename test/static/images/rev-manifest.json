@@ -2,10 +2,11 @@
   "favicon.ico": "favicon-1d269d6d1b.ico",
   "fez-logo.png": "fez-logo-15e3d33a37.png",
   "fezui-logo.png": "fezui-logo-48b8da01ae.png",
+  "index/browsersync/bg.jpg": "index/browsersync/bg-f75e7f9489.jpg",
   "index/browsersync/optimize.gif": "index/browsersync/optimize-88955a39bc.gif",
   "index/browsersync/scroll-demo.gif": "index/browsersync/scroll-demo-1c4aceebba.gif",
   "index/browsersync/sync-demo.gif": "index/browsersync/sync-demo-e1c9ec793c.gif",
-  "index/bt/bg.jpg": "index/bt/bg-66aa2aa804.jpg",
+  "index/bt/bg.jpg": "index/bt/bg-1a8e5b9337.jpg",
   "index/bt/components.png": "index/bt/components-e7ed6fe92d.png",
   "index/bt/devices.png": "index/bt/devices-fb31c745ab.png",
   "index/expand/animate.png": "index/expand/animate-978ead800a.png",
@@ -49,5 +50,10 @@
   "index/framework/vue.png": "index/framework/vue-b68786d33a.png",
   "index/home.jpg": "index/home-7cded06dab.jpg",
   "index/main-workflow.jpg": "index/main-workflow-c09454ea49.jpg",
-  "wxcode.jpg": "wxcode-99a9ef1de5.jpg"
+  "index/three-video/copy00.png": "index/three-video/copy00-b56492c2d1.png",
+  "index/three-video/copy01.png": "index/three-video/copy01-68c45c7a1a.png",
+  "index/three-video/copy02.png": "index/three-video/copy02-6a8546bb05.png",
+  "index/three-video/copy03.png": "index/three-video/copy03-70c5bb0788.png",
+  "index/three-video/dotTexture.png": "index/three-video/dotTexture-5a4e040645.png",
+  "wxcode.jpg": "wxcode-d7f0879f16.jpg"
 }

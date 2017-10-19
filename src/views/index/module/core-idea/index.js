@@ -124,6 +124,7 @@ static
     │   │   ├── 2.png
     │   │   └── 3.png
     └── page2
+
     `,
     promiseService: `
 //文件：service.js
@@ -132,10 +133,10 @@ import Api from 'api-ajax';
 
 export default {
     productList: (params = {}) => {
-        return Q.Promise((resolve, reject) => {
+        return new Promise((resolve, reject) => {
             Api.get(url, params)
                 .then((data) => {
-                    //处理 data 数据
+                    //... 处理 data 为需要的格式
                     resolve(data);
                 }, function(error) {
                     reject(error);
@@ -143,7 +144,7 @@ export default {
         });
     },
     productNameById: (id) => {
-        return Q.Promise((resolve, reject) => {
+        return new Promise((resolve, reject) => {
             let data = ... //根据 id 处理 data 数据并重新组装
             resolve(data);
         });
@@ -158,7 +159,8 @@ import Service from 'service';
 Service.productList(params)
     .then((data) => {
 
-        //渲染并处理 data 数据 获取 id
+        //渲染并处理 data 数据
+        //从 data 中获取id 传给下一个函数执行
 
         return Service.productNameById(id);
     }, function(error) {
