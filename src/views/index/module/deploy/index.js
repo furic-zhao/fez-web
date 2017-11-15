@@ -1,6 +1,5 @@
 import temp from './index.hbs';
 
-
 let tempData = {};
 tempData.content1 = `
 <!DOCTYPE HTML>
@@ -217,111 +216,110 @@ tempData.content4 = `
 `;
 
 
-var browsersyncAnimate = function() {
-    var services = $('#m-browsersync');
-    if (services.length > 0) {
+const browsersyncAnimate = () => {
+  const services = $('#m-browsersync');
+  if (services.length > 0) {
 
-        services.waypoint(function(direction) {
+    services.waypoint(function(direction) {
 
-            if (direction === 'down' && !$(this.element).hasClass('animated')) {
-
-
-                var sec = services.find('.to-animate').length,
-                    sec = parseInt((sec * 200) + 400);
-
-                setTimeout(function() {
-                    services.find('.to-animate').each(function(k) {
-                        var el = $(this);
-
-                        setTimeout(function() {
-                            el.addClass('fadeInUp animated');
-                        }, k * 200, 'easeInOutExpo');
-
-                    });
-                }, 200);
-
-                setTimeout(function() {
-                    services.find('.to-animate-2').each(function(k) {
-                        var el = $(this);
-
-                        setTimeout(function() {
-                            el.addClass('bounceIn animated');
-                        }, k * 200, 'easeInOutExpo');
-
-                    });
-                }, sec);
+      if (direction === 'down' && !$(this.element).hasClass('animated')) {
 
 
-                $(this.element).addClass('animated');
+        let secLen = services.find('.to-animate').length;
+        let sec = parseInt((secLen * 200) + 400);
 
-            }
-        }, { offset: '80%' });
+        setTimeout(() => {
+          services.find('.to-animate').each(function(k) {
+            const el = $(this);
 
-    }
+            setTimeout(() => {
+              el.addClass('fadeInUp animated');
+            }, k * 200, 'easeInOutExpo');
+
+          });
+        }, 200);
+
+        setTimeout(() => {
+          services.find('.to-animate-2').each(function(k) {
+            const el = $(this);
+
+            setTimeout(() => {
+              el.addClass('bounceIn animated');
+            }, k * 200, 'easeInOutExpo');
+
+          });
+        }, sec);
+
+
+        $(this.element).addClass('animated');
+
+      }
+    }, { offset: '80%' });
+
+  }
 };
 
 /**
  * 部署模块动画
  */
-var sourceDeployAnimate = function() {
-    var trusted = $('#m-deploy');
-    if (trusted.length > 0) {
+const sourceDeployAnimate = () => {
+  const trusted = $('#m-deploy');
+  if (trusted.length > 0) {
 
-        trusted.waypoint(function(direction) {
+    trusted.waypoint(function(direction) {
 
-            if (direction === 'down' && !$(this.element).hasClass('animated')) {
+      if (direction === 'down' && !$(this.element).hasClass('animated')) {
 
-                var sec = trusted.find('.to-animate').length,
-                    sec = parseInt((sec * 200) + 400);
+        let secLen = trusted.find('.to-animate').length;
+        let sec = parseInt((secLen * 200) + 400);
 
-                setTimeout(function() {
-                    trusted.find('.to-animate').each(function(k) {
-                        var el = $(this);
+        setTimeout(() => {
+          trusted.find('.to-animate').each(function(k) {
+            var el = $(this);
 
-                        setTimeout(function() {
-                            el.addClass('fadeIn animated');
-                        }, k * 200, 'easeInOutExpo');
+            setTimeout(() => {
+              el.addClass('fadeIn animated');
+            }, k * 200, 'easeInOutExpo');
 
-                    });
-                }, 200);
+          });
+        }, 200);
 
-                setTimeout(function() {
-                    trusted.find('.to-animate-2').each(function(k) {
-                        var el = $(this);
+        setTimeout(() => {
+          trusted.find('.to-animate-2').each(function(k) {
+            var el = $(this);
 
-                        setTimeout(function() {
-                            el.addClass('bounceIn animated');
-                        }, k * 200, 'easeInOutExpo');
+            setTimeout(() => {
+              el.addClass('bounceIn animated');
+            }, k * 200, 'easeInOutExpo');
 
-                    });
-                }, sec);
+          });
+        }, sec);
 
 
-                $(this.element).addClass('animated');
+        $(this.element).addClass('animated');
 
-            }
-        }, { offset: '80%' });
+      }
+    }, { offset: '80%' });
 
-    }
+  }
 };
 
-var testimonialCarousel = function() {
-    $('.owl-carousel-fullwidth').owlCarousel({
-        animateOut: 'slideOutDown',
-        animateIn: 'flipInX',
-        items: 1,
-        margin: 30,
-        stagePadding: 30,
-        smartSpeed: 450,
-        autoHeight:true,
-        nav:true,
-    });
+const testimonialCarousel = () => {
+  $('.owl-carousel-fullwidth').owlCarousel({
+    animateOut: 'slideOutDown',
+    animateIn: 'flipInX',
+    items: 1,
+    margin: 30,
+    stagePadding: 30,
+    smartSpeed: 450,
+    autoHeight: true,
+    nav: true,
+  });
 };
 
 export default () => {
-	$("#fez-source-deploy").html(temp(tempData));
-    sourceDeployAnimate();
-    browsersyncAnimate();
-    // testimonialCarousel();
+  $("#fez-source-deploy").html(temp(tempData));
+  sourceDeployAnimate();
+  browsersyncAnimate();
+  // testimonialCarousel();
 }
-

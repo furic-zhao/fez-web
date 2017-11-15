@@ -1,29 +1,18 @@
 import Temp from './index.hbs';
 
-const faqAnimate = () => {
-  const faq = $('#fez-faq');
-  if (faq.length > 0) {
+const bootstrapAnimate = () => {
+  const services = $('#fez-bootstrap');
+  if (services.length > 0) {
 
-    faq.waypoint(function(direction) {
+    services.waypoint(function(direction) {
 
       if (direction === 'down' && !$(this.element).hasClass('animated')) {
 
-        let secLen = faq.find('.to-animate').length;
+        let secLen = services.find('.to-animate').length;
         let sec = parseInt((secLen * 200) + 400);
 
         setTimeout(() => {
-          faq.find('.to-animate').each(function(k) {
-            var el = $(this);
-
-            setTimeout(() => {
-              el.addClass('fadeIn animated');
-            }, k * 200, 'easeInOutExpo');
-
-          });
-        }, 200);
-
-        setTimeout(() => {
-          faq.find('.to-animate-2').each(function(k) {
+          services.find('.to-animate').each(function(k) {
             var el = $(this);
 
             setTimeout(() => {
@@ -31,9 +20,22 @@ const faqAnimate = () => {
             }, k * 200, 'easeInOutExpo');
 
           });
+        }, 200);
+
+        setTimeout(() => {
+          services.find('.to-animate-2').each(function(k) {
+            var el = $(this);
+
+            setTimeout(() => {
+              el.addClass('bounceIn animated');
+            }, k * 200, 'easeInOutExpo');
+
+          });
         }, sec);
 
+
         $(this.element).addClass('animated');
+
       }
     }, { offset: '80%' });
 
@@ -41,6 +43,6 @@ const faqAnimate = () => {
 };
 
 export default () => {
-  $("#fez-faq").html(Temp());
-  faqAnimate();
+  $("#fez-bootstrap").html(Temp());
+  bootstrapAnimate();
 }

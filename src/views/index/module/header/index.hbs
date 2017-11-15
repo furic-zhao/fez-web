@@ -2,8 +2,10 @@
     <nav class="navbar navbar-default">
         <div class="navbar-header">
             <!-- Mobile Toggle Menu Button -->
-            <a href="#" class="js-fez-nav-toggle fez-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
-            <a class="navbar-brand" href="index.html">
+            <a href="#" class="js-fez-nav-toggle fez-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <i></i>
+            </a>
+            <a class="navbar-brand" href="/">
                 <svg class="icon" aria-hidden="true">
                     <use xlink:href="#fez-fez-logo"></use>
                 </svg>
@@ -11,58 +13,15 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li class="active">
-                    <a href="#" data-nav-section="home">
-                        <span><i class="fa fa-home"></i> FEZ</span>
-                    </a>
-                </li>
+                {{#each this}}
                 <li>
-                    <a href="#" data-nav-section="architecture">
-                        <span><i class="fa fa-fort-awesome"></i> 功能架构</span>
+                    <a href="{{href}}" data-nav-section="{{section}}" class="{{class}}" target="{{target}}">
+                        <span><i class="{{icon}}"></i> {{name}}</span>
                     </a>
                 </li>
-                <li>
-                    <a href="#" data-nav-section="core-idea">
-                        <span><i class="fa fa-heartbeat"></i> 核心理念</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" data-nav-section="source-deploy">
-                        <span><i class="fa fa-coffee"></i> 测试部署</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" data-nav-section="fez-expand">
-                        <span><i class="fa fa-puzzle-piece"></i> 功能扩展</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://github.com/furic-zhao/fez" target="_blank" class="external">
-                        <span><i class="fa fa-github-square"></i> 下载使用</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="http://fez.jd.com/fezui" target="_blank" class="external">
-                        <span><i class="fa fa-cubes"></i> FEZUI</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="http://fez.jd.com/apidoc" target="_blank" class="external">
-                        <span><i class="fa fa-pencil-square-o"></i> APIDOC</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="http://fez.jd.com/fezmock" target="_blank" class="external">
-                        <span><i class="fa fa-dropbox"></i> FEZMOCK</span>
-                    </a>
-                </li>
-                {{!--
-                <li>
-                    <a href="#" data-nav-section="blog">
-                        <span><i class="fa fa-rss-square"></i> FEZ博客</span>
-                    </a>
-                </li>
-                <li class="call-to-action">
+                {{/each}}
+
+{{!--                 <li class="call-to-action">
                     <a class="sign-up" href="#">
                         <span>注册</span>
                     </a>

@@ -1,76 +1,73 @@
-import temp from './index.hbs';
+import Temp from './index.hbs';
 
-var trustedAnimate = function() {
-    var trusted = $('#m-modularity');
-    if (trusted.length > 0) {
+const trustedAnimate = () => {
+  const trusted = $('#m-modularity');
+  if (trusted.length > 0) {
 
-        trusted.waypoint(function(direction) {
+    trusted.waypoint(function(direction) {
 
-            if (direction === 'down' && !$(this.element).hasClass('animated')) {
+      if (direction === 'down' && !$(this.element).hasClass('animated')) {
 
-                var sec = trusted.find('.to-animate').length,
-                    sec = parseInt((sec * 200) + 400);
+        let secLen = trusted.find('.to-animate').length;
+        let sec = parseInt((secLen * 200) + 400);
 
-                setTimeout(function() {
-                    trusted.find('.to-animate').each(function(k) {
-                        var el = $(this);
+        setTimeout(() => {
+          trusted.find('.to-animate').each(function(k) {
+            var el = $(this);
 
-                        setTimeout(function() {
-                            el.addClass('fadeIn animated');
-                        }, k * 200, 'easeInOutExpo');
+            setTimeout(() => {
+              el.addClass('fadeIn animated');
+            }, k * 200, 'easeInOutExpo');
 
-                    });
-                }, 200);
+          });
+        }, 200);
 
-                setTimeout(function() {
-                    trusted.find('.to-animate-2').each(function(k) {
-                        var el = $(this);
+        setTimeout(() => {
+          trusted.find('.to-animate-2').each(function(k) {
+            var el = $(this);
 
-                        setTimeout(function() {
-                            el.addClass('bounceIn animated');
-                        }, k * 200, 'easeInOutExpo');
+            setTimeout(() => {
+              el.addClass('bounceIn animated');
+            }, k * 200, 'easeInOutExpo');
 
-                    });
-                }, sec);
+          });
+        }, sec);
+        $(this.element).addClass('animated');
+      }
+    }, { offset: '80%' });
 
-
-                $(this.element).addClass('animated');
-
-            }
-        }, { offset: '80%' });
-
-    }
+  }
 };
 
-var blogAnimate = function() {
-    var footer = $('#m-promise');
-    if (footer.length > 0) {
+const blogAnimate = () => {
+  const footer = $('#m-promise');
+  if (footer.length > 0) {
 
-        footer.waypoint(function(direction) {
+    footer.waypoint(function(direction) {
 
-            if (direction === 'down' && !$(this.element).hasClass('animated')) {
+      if (direction === 'down' && !$(this.element).hasClass('animated')) {
 
-                setTimeout(function() {
-                    footer.find('.to-animate').each(function(k) {
-                        var el = $(this);
+        setTimeout(() => {
+          footer.find('.to-animate').each(function(k) {
+            var el = $(this);
 
-                        setTimeout(function() {
-                            el.addClass('fadeIn animated');
-                        }, k * 200, 'easeInOutExpo');
+            setTimeout(() => {
+              el.addClass('fadeIn animated');
+            }, k * 200, 'easeInOutExpo');
 
-                    });
-                }, 200);
+          });
+        }, 200);
 
+        $(this.element).addClass('animated');
 
-                $(this.element).addClass('animated');
+      }
+    }, { offset: '80%' });
 
-            }
-        }, { offset: '80%' });
-
-    }
+  }
 };
-let renderData = {
-    moduleViews: `
+
+const renderData = {
+  moduleViews: `
 views
 ├── page1
 │   ├── index.html
@@ -99,7 +96,7 @@ views
         ├── module2
         └── module3
     `,
-    moduleStyles: `
+  moduleStyles: `
 static
 └── styles
     ├── page1
@@ -113,7 +110,7 @@ static
     │   └── module3.scss
     └── page2.scss
     `,
-    moduleImages: `
+  moduleImages: `
 static
 └── images
     ├── page1
@@ -126,7 +123,7 @@ static
     └── page2
 
     `,
-    promiseService: `
+  promiseService: `
 //文件：service.js
 
 import Api from 'api-ajax';
@@ -151,7 +148,7 @@ export default {
     }
 }
     `,
-    promiseModule: `
+  promiseModule: `
 //文件：module.js
 
 import Service from 'service';
@@ -178,7 +175,7 @@ Service.productList(params)
     `
 };
 export default () => {
-    $("#fez-trusted").html(temp(renderData));
-    trustedAnimate();
-    blogAnimate();
+  $("#fez-trusted").html(Temp(renderData));
+  trustedAnimate();
+  blogAnimate();
 }

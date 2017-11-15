@@ -1,93 +1,92 @@
 import temp from './index.hbs';
 
-var architectureAnimate = function() {
-    var services = $('#m-framework');
-    if (services.length > 0) {
+const architectureAnimate = () => {
+  const services = $('#m-framework');
+  if (services.length > 0) {
 
-        services.waypoint(function(direction) {
+    services.waypoint(function(direction) {
 
-            if (direction === 'down' && !$(this.element).hasClass('animated')) {
-
-
-                var sec = services.find('.to-animate').length,
-                    sec = parseInt((sec * 200) + 400);
-
-                setTimeout(function() {
-                    services.find('.to-animate').each(function(k) {
-                        var el = $(this);
-
-                        setTimeout(function() {
-                            el.addClass('fadeInUp animated');
-                        }, k * 200, 'easeInOutExpo');
-
-                    });
-                }, 200);
-
-                setTimeout(function() {
-                    services.find('.to-animate-2').each(function(k) {
-                        var el = $(this);
-
-                        setTimeout(function() {
-                            el.addClass('bounceIn animated');
-                        }, k * 200, 'easeInOutExpo');
-
-                    });
-                }, sec);
+      if (direction === 'down' && !$(this.element).hasClass('animated')) {
 
 
-                $(this.element).addClass('animated');
+        let secLen = services.find('.to-animate').length;
+        let sec = parseInt((secLen * 200) + 400);
 
-            }
-        }, { offset: '80%' });
+        setTimeout(() => {
+          services.find('.to-animate').each(function(k) {
+            const el = $(this);
 
-    }
+            setTimeout(() => {
+              el.addClass('fadeInUp animated');
+            }, k * 200, 'easeInOutExpo');
+
+          });
+        }, 200);
+
+        setTimeout(() => {
+          services.find('.to-animate-2').each(function(k) {
+            const el = $(this);
+
+            setTimeout(() => {
+              el.addClass('bounceIn animated');
+            }, k * 200, 'easeInOutExpo');
+
+          });
+        }, sec);
+
+        $(this.element).addClass('animated');
+      }
+    }, { offset: '80%' });
+
+  }
 };
 
-var mainFunctionAnimate = function() {
-    var services = $('#m-effect');
-    if (services.length > 0) {
+const mainFunctionAnimate = () => {
+  const services = $('#m-effect');
+  if (services.length > 0) {
 
-        services.waypoint(function(direction) {
+    services.waypoint(function(direction) {
 
-            if (direction === 'down' && !$(this.element).hasClass('animated')) {
-
-
-                var sec = services.find('.to-animate').length,
-                    sec = parseInt((sec * 200) + 400);
-
-                setTimeout(function() {
-                    services.find('.to-animate').each(function(k) {
-                        var el = $(this);
-
-                        setTimeout(function() {
-                            el.addClass('fadeInUp animated');
-                        }, k * 200, 'easeInOutExpo');
-
-                    });
-                }, 200);
-
-                setTimeout(function() {
-                    services.find('.to-animate-2').each(function(k) {
-                        var el = $(this);
-
-                        setTimeout(function() {
-                            el.addClass('bounceIn animated');
-                        }, k * 200, 'easeInOutExpo');
-
-                    });
-                }, sec);
+      if (direction === 'down' && !$(this.element).hasClass('animated')) {
 
 
-                $(this.element).addClass('animated');
+        let secLen = services.find('.to-animate').length;
+        let sec = parseInt((secLen * 200) + 400);
 
-            }
-        }, { offset: '80%' });
+        setTimeout(() => {
+          services.find('.to-animate').each(function(k) {
+            const el = $(this);
 
-    }
+            setTimeout(() => {
+              el.addClass('fadeInUp animated');
+            }, k * 200, 'easeInOutExpo');
+
+          });
+        }, 200);
+
+        setTimeout(() => {
+          services.find('.to-animate-2').each(function(k) {
+            const el = $(this);
+
+            setTimeout(() => {
+              el.addClass('bounceIn animated');
+            }, k * 200, 'easeInOutExpo');
+
+          });
+        }, sec);
+
+        $(this.element).addClass('animated');
+
+      }
+    }, { offset: '80%' });
+
+  }
 };
 
 export default () => {
-    $("#fez-architecture").html(temp());
-    architectureAnimate();
-    mainFunctionAnimate();
+  $("#fez-architecture").html(temp());
+
+  architectureAnimate();
+
+  mainFunctionAnimate();
 }
