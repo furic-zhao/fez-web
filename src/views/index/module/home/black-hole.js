@@ -367,7 +367,7 @@ export default () => {
     y: "-30%",
     ease: Power1.easeOut
   }, "+=1");
-  animTl.staggerFrom(".outro .copy p", 0.8, {
+  animTl.staggerFrom([".outro .copy h2",".outro .copy p"], 0.8, {
     opacity: 0,
     y: "-50%",
     ease: Power1.easeOut

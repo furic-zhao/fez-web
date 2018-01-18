@@ -37,42 +37,7 @@ a:focus {
   background: #00ADB5;
 }
 
-// .btn {
-//   text-transform: uppercase;
-//   letter-spacing: 2px;
-//   transition: 0.3s;
-//   &.btn-primary {
-//     background: #3c8dbc;
-//     color: #fff;
-//     border: none !important;
-//     border: 2px solid transparent !important;
-//     &:hover,
-//     &:active,
-//     &:focus {
-//       box-shadow: none;
-//       background: #63a4c9;
-//     }
-//   }
-//   &.btn-default {
-//     &:hover,
-//     &:focus,
-//     &:active {
-//       border-color: transparent;
-//     }
-//   }
-//   &:hover,
-//   &:focus,
-//   &:focus {
-//     background: #63a4c9 !important;
-//     color: #fff;
-//     outline: none !important;
-//   }
-// }
 
-// p {
-//     margin-bottom: 24px;
-//     font-size: 16px;
-// }
 
 /**
  * 顶部导航模块
@@ -83,13 +48,10 @@ a:focus {
   z-index: 99;
   width: 100%;
   opacity: 0.9;
-  top: 0; // .navbar {
-  //     padding-bottom: 0;
-  //     margin-bottom: 0;
-  // }
+  top: 0;
   .navbar-collapse {
     .navbar-right {
-      margin: 0 10px; // text-align: center;
+      margin: 0 10px;
     }
     li {
       &.call-to-action {
@@ -156,7 +118,7 @@ a:focus {
         }
         span {
           position: relative;
-          display: block;
+          // display: block;
           padding-bottom: 2px;
           &:before {
             content: "";
@@ -357,11 +319,14 @@ a:focus {
 
 
 
+
+
+
 /**
  * 页面首屏
  */
 
-#fez-home {
+.section-home {
   background-image: url(../images/index/home.jpg);
   background-color: transparent;
   background-size: cover;
@@ -370,7 +335,7 @@ a:focus {
   background-color: #e6e6e6;
   color: #fff;
   height: 620px;
-  .inner-item{
+  .inner-item {
     text-align: center;
     padding-top: 150px;
   }
@@ -401,8 +366,7 @@ a:focus {
     }
     .call-to-action {
       display: block;
-      width: 100%;
-      // a {
+      width: 100%; // a {
       //   width: 230px;
       //   display: inline-block;
       //   font-size: 24px;
@@ -415,8 +379,7 @@ a:focus {
       //   }
       // }
     }
-  }
-  // a {
+  } // a {
   //   color: rgba(255, 255, 255, 0.8) !important;
   //   text-decoration: underline;
   //   &:hover {
@@ -437,6 +400,9 @@ a:focus {
 
 
 
+
+
+
 /**
  * bootstrap 整合
  */
@@ -444,9 +410,10 @@ a:focus {
 .getting-started {
   // margin-top: 50px;
   // margin-bottom: 50px;
-  background-image: url(../images/index/bt/bg.jpg);
+  background-image: url(../images/index/bt/bg.png);
   background-color: #f2f2f2; // background-size: 100% auto;
-  background-position: top center;
+  background-position: center center;
+  background-attachment: fixed; // background-size: cover;
   color: #fff; // display: flex;
   // flex-wrap: wrap;
   .getting-grid {
@@ -489,6 +456,9 @@ a:focus {
 
 
 
+
+
+
 /**
  * FEZ 扩展模块
  */
@@ -528,7 +498,6 @@ a:focus {
     opacity: 1;
   }
 }
-
 
 
 /**
@@ -661,6 +630,9 @@ a:focus {
 
 
 
+
+
+
 /**
  * 我们的团队
  */
@@ -763,11 +735,9 @@ a:focus {
     }
   }
   h3 {
-    // font-size: 18px;
-    font-weight: 400; // line-height: 1.5;
+    font-weight: 400;
     color: #8f989f;
-    position: relative; // display: block;
-    // padding-bottom: 30px;
+    position: relative;
   }
 }
 
@@ -806,11 +776,10 @@ a:focus {
   .section-title {
     font-size: 22px;
     color: #fff;
-    position: relative; // padding-bottom: 20px;
+    position: relative;
   }
   .copy-right {
-    position: relative; // padding-top: 20px;
-    // margin-top: 40px;
+    position: relative;
     >a {
       color: rgba(255, 255, 255, 0.6);
     }
@@ -853,6 +822,9 @@ a:focus {
     }
   }
 }
+
+
+
 
 
 
@@ -959,6 +931,3 @@ a:focus {
   animation-fill-mode: both;
 }
 
-
-
-/*# sourceMappingURL=style.css.map */

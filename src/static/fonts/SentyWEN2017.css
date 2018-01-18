@@ -1,0 +1,12 @@
+@font-face {
+    font-family: "SentyWen";
+    src: url("SentyWEN2017.eot"); /* IE9 */
+    src: url("SentyWEN2017.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("SentyWEN2017.woff") format("woff"), /* chrome, firefox */
+    url("SentyWEN2017.ttf") format("truetype"), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+    url("SentyWEN2017.svg#SentyWen") format("svg"); /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+}
+
+

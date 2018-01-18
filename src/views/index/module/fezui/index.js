@@ -45,4 +45,5 @@ const bootstrapAnimate = () => {
 export default () => {
   $("#fez-bootstrap").html(Temp());
   bootstrapAnimate();
+  // $("#js-fezui-bg").stellar();
 }

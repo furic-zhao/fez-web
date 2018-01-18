@@ -1,20 +1,12 @@
 {
   "name": "FEZ",
-  "authors": [
-    "zhaohuijian <zhaohuijian@jd.com>"
-  ],
+  "authors": ["zhaohuijian <zhaohuijian@jd.com>"],
   "description": "Bower第三方工具库自动化管理",
   "main": "",
   "license": "MIT",
   "homepage": "",
   "private": true,
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
+  "ignore": ["**/.*", "node_modules", "bower_components", "test", "tests"],
   "dependencies": {
     "jquery": "^2.1.4",
     "bootstrap": "^3.3.7",
@@ -48,9 +40,7 @@
       ]
     },
     "vue": {
-      "main": [
-        "dist/vue.js"
-      ]
+      "main": ["dist/vue.js"]
     },
     "owl.carousel": {
       "main": [

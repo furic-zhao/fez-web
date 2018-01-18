@@ -30,27 +30,6 @@ const navList = [{
   href: "https://github.com/furic-zhao/fez",
   class: "external",
   target: "_blank"
-}, {
-  name: "FEZUI",
-  icon: "fa fa-cubes",
-  section: "",
-  href: "http://fezui.hestudy.com",
-  class: "external",
-  target: "_blank"
-}, {
-  name: "APIDOC",
-  icon: "fa fa-pencil-square-o",
-  section: "",
-  href: "http://apidoc.hestudy.com",
-  class: "external",
-  target: "_blank"
-}, {
-  name: "FEZMOCK",
-  icon: "fa fa-dropbox",
-  section: "",
-  href: "http://fezmock.hestudy.com",
-  class: "external",
-  target: "_blank"
 }];
 
 import Temp from './index.hbs';
@@ -81,7 +60,7 @@ const windowScroll = () => {
 // Page Nav
 const clickMenu = () => {
 
-  $('#navbar a:not([class="external"])').click(function(event) {
+  $('#navbar a:not([class~="external"])').click(function(event) {
     event.preventDefault();
     const section = $(this).data('nav-section');
     const navbar = $('#navbar');
