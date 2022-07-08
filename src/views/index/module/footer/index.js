@@ -1,29 +1,28 @@
-import Temp from './index.hbs';
+import Temp from './index.hbs'
 
 const footerAnimate = () => {
-  const footer = $('#fez-footer');
+  const footer = $('#js-fez-footer')
   if (footer.length > 0) {
-    footer.waypoint(function(direction) {
+    footer.waypoint(function (direction) {
       if (direction === 'down' && !$(this.element).hasClass('animated')) {
         setTimeout(() => {
-          footer.find('.to-animate').each(function(k) {
-            const el = $(this);
+          footer.find('.to-animate').each(function (k) {
+            const el = $(this)
 
             setTimeout(() => {
-              el.addClass('fadeIn animated');
-            }, k * 200, 'easeInOutExpo');
+              el.addClass('fadeIn animated')
+            }, k * 200, 'easeInOutExpo')
+          })
+        }, 200)
 
-          });
-        }, 200);
-
-        $(this.element).addClass('animated');
+        $(this.element).addClass('animated')
       }
-    }, { offset: '80%' });
+    }, { offset: '80%' })
   }
-};
+}
 
 export default () => {
-  $("#fez-footer").html(Temp());
+  $('#js-fez-footer').html(Temp())
 
   // $('#js-open-weixin').popover({
   //   trigger: 'hover',
@@ -31,7 +30,7 @@ export default () => {
   //   placement: 'top',
   //   content: '<image src="./static/images/wxcode.jpg" width="240" height="300">',
   //   title: '微信扫码加入FEZ沟通群',
-  // });
+  // })
 
-  footerAnimate();
+  footerAnimate()
 }

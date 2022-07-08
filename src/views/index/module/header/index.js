@@ -1,3 +1,5 @@
+import Temp from './index.hbs'
+
 const navList = [{
   name: "FEZ",
   icon: "fa fa-home",
@@ -30,113 +32,101 @@ const navList = [{
   href: "https://github.com/furic-zhao/fez",
   class: "external",
   target: "_blank"
-}];
-
-import Temp from './index.hbs';
-
-// Window Scroll
-const windowScroll = () => {
-  let lastScrollTop = 0;
-
-  $(window).scroll(function(event) {
-
-    const header = $('#fez-header');
-    const scrlTop = $(this).scrollTop();
-
-    if (scrlTop > 500 && scrlTop <= 2000) {
-      header.addClass('navbar-fixed-top fez-animated slideInDown');
-    } else if (scrlTop <= 500) {
-      if (header.hasClass('navbar-fixed-top')) {
-        header.addClass('navbar-fixed-top fez-animated slideOutUp');
-        setTimeout(() => {
-          header.removeClass('navbar-fixed-top fez-animated slideInDown slideOutUp');
-        }, 100);
-      }
-    }
-
-  });
-};
+}]
 
 // Page Nav
 const clickMenu = () => {
 
-  $('#navbar a:not([class~="external"])').click(function(event) {
-    event.preventDefault();
-    const section = $(this).data('nav-section');
-    const navbar = $('#navbar');
+  $('#js-navbar a:not([class~="external"])').click(function(event) {
+    event.preventDefault()
+    const section = $(this).data('nav-section')
+    const navbar = $('#js-navbar')
 
     if ($('[data-section="' + section + '"]').length) {
       $('html, body').animate({
-        scrollTop: $('[data-section="' + section + '"]').offset().top - 55
-      }, 500);
+        scrollTop: $('[data-section="' + section + '"]').offset().top - 0
+      }, 500)
     }
 
     if (navbar.is(':visible')) {
-      navbar.removeClass('in');
-      navbar.attr('aria-expanded', 'false');
-      $('.js-fez-nav-toggle').removeClass('active');
+      navbar.removeClass('in')
+      navbar.attr('aria-expanded', 'false')
+      $('.js-fez-nav-toggle').removeClass('active')
     }
-  });
-};
+  })
+}
 
 // Burger Menu
 const burgerMenu = () => {
 
   $('body').on('click', '.js-fez-nav-toggle', function(event) {
 
-    event.preventDefault();
+    event.preventDefault()
 
-    if ($('#navbar').is(':visible')) {
-      $(this).removeClass('active');
+    if ($('#js-navbar').is(':visible')) {
+      $(this).removeClass('active')
     } else {
-      $(this).addClass('active');
+      $(this).addClass('active')
     }
 
-  });
-};
+  })
+}
 
 
 // Reflect scrolling in navigation
 const navActive = function(section) {
 
-  var $el = $('#navbar > ul');
-  $el.find('li').removeClass('active');
+  var $el = $('#js-navbar > ul')
+  $el.find('li').removeClass('active')
   $el.each(function() {
-    $(this).find('a[data-nav-section="' + section + '"]').closest('li').addClass('active');
-  });
+    $(this).find('a[data-nav-section="' + section + '"]').closest('li').addClass('active')
+  })
 
-};
+}
 
 const navigationSection = function() {
 
-  const $section = $('section[data-section]');
+  const $section = $('section[data-section]')
 
   $section.waypoint(function(direction) {
-
-    if (direction === 'down') {
-      navActive($(this.element).data('section'));
+    const scrlTop = $(document).scrollTop()
+    if (direction === 'down' && scrlTop > 30) {
+      navActive($(this.element).data('section'))
     }
   }, {
-    offset: '150px'
-  });
+    offset: '60px'
+  })
 
   $section.waypoint(function(direction) {
     if (direction === 'up') {
-      navActive($(this.element).data('section'));
+      navActive($(this.element).data('section'))
     }
   }, {
     offset: function() {
-      return -$(this.element).height() + 155;
+      return -$(this.element).height() + 60
     }
-  });
+  })
+}
 
-};
-
+const headerRoom = () => {
+  const headroom = new Headroom($('#js-fez-header')[0], {
+    offset: 205,
+    tolerance: 5,
+    classes: {
+      initial: 'animated',
+      pinned: 'slideInDown',
+      unpinned: 'slideOutUp'
+    }
+  })
+  // initialise
+  headroom.init()
+}
 
 export default () => {
-  $("#fez-header").html(Temp(navList));
-  windowScroll();
-  clickMenu();
-  burgerMenu();
-  navigationSection();
+  $('#js-fez-header').html(Temp(navList))
+  headerRoom()
+
+  clickMenu()
+  burgerMenu()
+  navigationSection()
 }

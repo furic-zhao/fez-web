@@ -1,19 +1,25 @@
+@import './index/home';
+@import './index/architecture';
+@import './index/core-idea';
+@import './index/expand';
 @import '../fonts/SentyWEN2017';
-.navbar,
+
+
 h2,
+.navbar,
 .fez-blog h3,
-#fez-footer h3,
+.fez-footer h3,
 .core-features h3,
 .section-home .btn {
   font-family: "SentyWen"!important;
 }
 
-.icon-nodejs {
-  background-image: url(../images/index/framework/nodejs.png);
-}
-
 .icon-npm {
   background-image: url(../images/index/framework/npm.png);
+}
+
+.icon-nodejs {
+  background-image: url(../images/index/framework/nodejs.png);
 }
 
 .icon-gulp {
@@ -123,32 +129,8 @@ h2,
   .materialize {
     background-image: url(../images/index/expand/materialize.png);
   }
-}
 
-canvas {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.5;
-}
-
-.intro {
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 1200px;
-  max-width: 100%;
-}
-
-.outro {
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 1200px;
-  max-width: 100%;
-  pointer-events: none;
+  .eslint {
+    background-image: url(../images/index/expand/eslint.png)
+  }
 }

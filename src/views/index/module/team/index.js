@@ -1,7 +1,7 @@
-import temp from './index.hbs';
+import temp from './index.hbs'
 
 var teamAnimate = function() {
-    var team = $('#fez-team');
+    var team = $('#fez-team')
     if (team.length > 0) {
 
         team.waypoint(function(direction) {
@@ -9,39 +9,39 @@ var teamAnimate = function() {
             if (direction === 'down' && !$(this.element).hasClass('animated')) {
 
                 var sec = team.find('.to-animate').length,
-                    sec = parseInt((sec * 200) + 400);
+                    sec = parseInt((sec * 200) + 400)
 
                 setTimeout(function() {
                     team.find('.to-animate').each(function(k) {
-                        var el = $(this);
+                        var el = $(this)
 
                         setTimeout(function() {
-                            el.addClass('fadeIn animated');
-                        }, k * 200, 'easeInOutExpo');
+                            el.addClass('fadeIn animated')
+                        }, k * 200, 'easeInOutExpo')
 
-                    });
-                }, 200);
+                    })
+                }, 200)
 
                 setTimeout(function() {
                     team.find('.to-animate-2').each(function(k) {
-                        var el = $(this);
+                        var el = $(this)
 
                         setTimeout(function() {
-                            el.addClass('fadeInUp animated');
-                        }, k * 200, 'easeInOutExpo');
+                            el.addClass('fadeInUp animated')
+                        }, k * 200, 'easeInOutExpo')
 
-                    });
-                }, sec);
+                    })
+                }, sec)
 
 
-                $(this.element).addClass('animated');
+                $(this.element).addClass('animated')
 
             }
-        }, { offset: '80%' });
+        }, { offset: '80%' })
 
     }
-};
+}
 export default () => {
-	$("#fez-team").html(temp());
-	teamAnimate();
+	$('#fez-team').html(temp())
+	teamAnimate()
 }

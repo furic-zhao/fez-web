@@ -1,47 +1,62 @@
-<div class="fluid-container">
+<div class="fez-header">
   <nav class="navbar navbar-default">
     <div class="navbar-header">
-      <!-- Mobile Toggle Menu Button -->
-      <a href="#" class="js-fez-nav-toggle fez-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-       <i></i>
+      <!-- 移动端菜单图标 -->
+      <a href="#" class="js-fez-nav-toggle fez-nav-toggle" data-toggle="collapse" data-target="#js-navbar" aria-expanded="false" aria-controls="navbar">
+        <i></i>
       </a>
+      <!-- fez logo -->
       <a class="navbar-brand" href="/">
         <svg class="icon" aria-hidden="true">
           <use xlink:href="#fez-fez-logo"></use>
         </svg>
       </a>
     </div>
-    <div id="navbar" class="navbar-collapse collapse">
+    <!-- 导航菜单 -->
+    <div id="js-navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
         {{#each this}}
         <li>
           <a href="{{href}}" data-nav-section="{{section}}" class="{{class}}" target="{{target}}">
-            <span><i class="{{icon}}"></i> {{name}}</span>
+            <span>
+              <i class="{{icon}}"></i> {{name}}</span>
           </a>
         </li>
         {{/each}}
         <li role="presentation" class="dropdown">
           <a href="#" class="external dropdown-toggle" data-toggle="dropdown">
-          <i class="fa fa-joomla"></i> FEZ生态圈
-          <span class="caret"></span>
-        </a>
+            <i class="fa fa-joomla"></i> FEZ生态圈
+            <span class="caret"></span>
+          </a>
           <ul class="dropdown-menu">
-            <li><a href="http://fezui.hestudy.com" class="external" target="_blank"><i class="fa fa-delicious"></i> FEZUI</a></li>
-            <li><a href="http://fezmock.hestudy.com" class="external" target="_blank"><i class="fa fa-dropbox"></i> FEZMOCK</a></li>
-            <li><a href="http://apidoc.hestudy.com" class="external" target="_blank"><i class="fa fa-pencil-square-o"></i> APIDOC</a></li>
-            <li><a href="http://fezlayout.hestudy.com" class="external" target="_blank"><i class="fa fa-columns"></i> FEZ Layout</a></li>
+            <li>
+              <a href="http://fezui.hestudy.com" class="external" target="_blank">
+                <i class="fa fa-delicious"></i> FEZUI</a>
+            </li>
+            <li>
+              <a href="http://fezmock.hestudy.com" class="external" target="_blank">
+                <i class="fa fa-dropbox"></i> FEZMOCK</a>
+            </li>
+            <li>
+              <a href="http://apidoc.hestudy.com" class="external" target="_blank">
+                <i class="fa fa-pencil-square-o"></i> APIDOC</a>
+            </li>
+            <li>
+              <a href="http://fezlayout.hestudy.com" class="external" target="_blank">
+                <i class="fa fa-columns"></i> FEZ Layout</a>
+            </li>
           </ul>
         </li>
         {{!--
         <li class="call-to-action">
           <a class="sign-up" href="#">
-                        <span>注册</span>
-                    </a>
+            <span>注册</span>
+          </a>
         </li>
         <li class="call-to-action">
           <a class="log-in" href="#">
-                        <span>登录</span>
-                    </a>
+            <span>登录</span>
+          </a>
         </li> --}}
       </ul>
     </div>

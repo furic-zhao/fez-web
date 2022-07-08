@@ -1,0 +1,27 @@
+{
+    "presets": [
+        ["env",
+        {
+            "modules": false,
+            "targets":
+            {
+                "browsers": ["> 1%", "last 2 versions", "not ie <= 8"]
+            }
+        }],
+        "stage-0"
+    ],
+    "plugins": ["transform-runtime"],
+    "env":
+    {
+        "development":
+        {
+            "presets": [],
+            "plugins": []
+        },
+        "production":
+        {
+            "presets": [],
+            "plugins": []
+        }
+    }
+}

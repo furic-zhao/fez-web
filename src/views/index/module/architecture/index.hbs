@@ -12,7 +12,11 @@
       <div class="col-md-3 text-center">
         <div class="box-services">
           <div class="icon to-animate">
-            <span class="icon-nodejs"></span>
+            <a href="https://nodejs.org/" target="_blank">
+              <svg aria-hidden='true'>
+                <use xlink:href='#fez-nodejs'></use>
+              </svg>
+            </a>
           </div>
           <div class="fez-post to-animate">
             <h3>高效、轻量、非阻塞</h3>
@@ -21,7 +25,11 @@
         </div>
         <div class="box-services">
           <div class="icon to-animate">
-            <span class="icon-es6"></span>
+            <a href="http://es6.ruanyifeng.com/" target="_blank">
+              <svg>
+                <use xlink:href='#fez-es6'></use>
+              </svg>
+            </a>
           </div>
           <div class="fez-post to-animate">
             <h3>大型应用、企业级开语言</h3>
@@ -32,7 +40,11 @@
       <div class="col-md-3 text-center">
         <div class="box-services">
           <div class="icon to-animate">
-            <span class="icon-npm"></span>
+            <a href="https://www.npmjs.com/" target="_blank">
+              <svg>
+                <use xlink:href='#fez-npm'></use>
+              </svg>
+            </a>
           </div>
           <div class="fez-post to-animate">
             <h3>全球最大开源包管理系统</h3>
@@ -41,18 +53,26 @@
         </div>
         <div class="box-services">
           <div class="icon to-animate">
-            <span class="icon-then"></span>
+            <a href="http://es6.ruanyifeng.com/#docs/promise" target="_blank">
+              <svg>
+                <use xlink:href='#fez-promises'></use>
+              </svg>
+            </a>
           </div>
           <div class="fez-post to-animate">
-            <h3>Promise异步编程</h3>
-            <p>FEZ 支持 Promise 异步编程，协调各模块间的异步调用，让Javasript代码可以“多线程”运行，极大提高执行效率，合理组织各模块关系</p>
+            <h3>前端异步编程</h3>
+            <p>FEZ 支持Promise、async/await异步编程，让Javasript代码可以“多线程”运行，极大提高代码执行效率，合理组织各模块关系</p>
           </div>
         </div>
       </div>
       <div class="col-md-3 text-center">
         <div class="box-services">
           <div class="icon to-animate">
-            <span class="icon-gulp"></span>
+            <a href="https://gulpjs.com/" target="_blank">
+              <svg>
+                <use xlink:href='#fez-gulp'></use>
+              </svg>
+            </a>
           </div>
           <div class="fez-post to-animate">
             <h3>Gulp自动化各种编译工作</h3>
@@ -61,10 +81,14 @@
         </div>
         <div class="box-services">
           <div class="icon to-animate">
-            <span class="icon-bower"></span>
+            <a href="https://bower.io/" target="_blank">
+              <svg>
+                <use xlink:href='#fez-bower'></use>
+              </svg>
+            </a>
           </div>
           <div class="fez-post to-animate">
-            <h3>Bower自动化第三方库管理</h3>
+            <h3>自动化第三方库管理</h3>
             <p>FEZ 可配置使用 Bower 搜索、安装、更新和卸载如JavaScript、CSS之类的网络资源，通过自动化注入技术完美解决复杂的框架包管理问题</p>
           </div>
         </div>
@@ -72,20 +96,28 @@
       <div class="col-md-3 text-center">
         <div class="box-services">
           <div class="icon to-animate">
-            <span class="icon-browserify"></span>
+            <a href="https://webpack.js.org/" target="_blank">
+              <svg aria-hidden="true">
+                <use xlink:href="#fez-webpack"></use>
+              </svg>
+            </a>
           </div>
           <div class="fez-post to-animate">
             <h3>模块化/分治/通用/复用</h3>
-            <p>FEZ 使用 Browserify 模块化组织和管理项目的各个功能模块，极大提升项目的可维护性、功能复用性，并实现积木式的搭建网页</p>
+            <p>FEZ 使用 webpack 模块化组织和管理项目的功能模块，极大提升项目的可维护性、功能复用性，并实现积木式的搭建网页</p>
           </div>
         </div>
         <div class="box-services">
           <div class="icon to-animate">
-            <span class="icon-browsersync"></span>
+            <a href="https://browsersync.io/" target="_blank">
+              <svg>
+                <use xlink:href="#fez-browsersync"></use>
+              </svg>
+            </a>
           </div>
           <div class="fez-post to-animate">
             <h3>自动化开发/测试</h3>
-            <p>FEZ 使用 Browsersync 让浏览器实时快速的响应前端各种文件的更改并自动刷新页面，亦可实时同步各个终端，提高至少30%的开发效率</p>
+            <p>FEZ 使用Browsersync实时快速响应文件更改并自动刷新浏览器页面，可将页面点击和滚动操作实时同步到各种终端，提高至少30%的开发效率</p>
           </div>
         </div>
       </div>
@@ -99,8 +131,8 @@
   <div class="grid2">
     <div class="core-f section-heading">
       <h2 class="to-animate">
-              <i class="fa fa-fort-awesome"></i> 全自动化的前端工作流
-            </h2>
+        <i class="fa fa-fort-awesome"></i> 业界先进的工作流解决方案
+      </h2>
       <div class="row">
         <div class="col-md-6">
           <div class="core">
@@ -114,14 +146,14 @@
             <i class="icon-layers to-animate-2"></i>
             <div class="fez-post to-animate">
               <h3>CSS</h3>
-              <p>FEZ 可配置使用SASS或者LESS，让书写样式具备编程能力，通过import方式模块化管理，并自动化编译成CSS，自动补全浏览器前缀。</p>
+              <p>FEZ 支持Sass/Less/stylus，让书写样式具备强大的编程能力，通过import方式模块化管理，并自动化编译成CSS，自动补全浏览器前缀。</p>
             </div>
           </div>
           <div class="core">
             <i class="icon-organization to-animate-2"></i>
             <div class="fez-post to-animate">
               <h3>HTML</h3>
-              <p>FEZ 可配置Bower资源、公共资源、页面资源的自动化注入功能，极大简化HTML页面资源的管理工作；可配置启用html压缩优化页面性能。</p>
+              <p>FEZ 支持第三方框架库(vendor)、项目公共(common)、页面独有(page)等资源自动化注入功能，极大简化HTML页面资源的管理工作；支持创建结构化HTML模板页、支持HTML压缩。</p>
             </div>
           </div>
         </div>
@@ -130,21 +162,21 @@
             <i class="icon-picture to-animate-2"></i>
             <div class="fez-post to-animate">
               <h3>Picture</h3>
-              <p>FEZ 支持对所有图片做无损压缩；可配置自动化合并小图标为雪碧图；支持所有图片自动化转换成WebP格式并做自动化的智能替换。</p>
+              <p>FEZ 支持图片深度无损压缩、Svg高清图片/图标解决方案、自动雪碧图、支持所有图片自动化转换成WebP格式并做自动化的智能替换。</p>
             </div>
           </div>
           <div class="core">
             <i class="icon-social-tumblr to-animate-2"></i>
             <div class="fez-post to-animate">
               <h3>Fonts</h3>
-              <p>FEZ 可配置SVG图标自动转化字体文件，并生成对应的字体样式。像Fontawesome一样使用自己的字体图标。支持对所有字体文件的压缩。</p>
+              <p>FEZ 支持网页中使用特殊字体的完美解决方案，支持Svg图标自动转化为Iconfont字体图标，支持自动引用第三方框架库字体文件。</p>
             </div>
           </div>
           <div class="core">
             <i class="icon-social-reddit to-animate-2"></i>
             <div class="fez-post to-animate">
               <h3>解决方案</h3>
-              <p>FEZ 可配置自动化內联SVG高清图标、自动化px=>rem转换、自动化CDN地址替换、自动化生成MD5版本号、自动化上线部署等解决方案。</p>
+              <p>FEZ 支持模块化/组件化开发模式、前端异步编程、静态资源编译/合并/压缩/Md5版本号、前后端分离Mock随机数据、移动端等比适配、自动化添加CDN地址前缀、自动化上线部署等解决方案。</p>
             </div>
           </div>
         </div>

@@ -1,9 +1,9 @@
 export default () => {
   // var ww = window.innerWidth,
   //     wh = window.innerHeight;
-  var ww = document.getElementById("fez-home").clientWidth,
-    wh = document.getElementById("fez-home").clientHeight;
-  // console.log(document.getElementById("fez-home").clientWidth);
+  var ww = document.getElementById("js-fez-home").clientWidth,
+    wh = document.getElementById("js-fez-home").clientHeight;
+  // console.log(document.getElementById("js-fez-home").clientWidth);
   var curve;
   var lengthTube = 600;
   var detailTube = 200;
@@ -24,8 +24,8 @@ export default () => {
   /* ===== ON RESIZE ==== */
   /* ==================== */
   window.addEventListener("resize", function() {
-    ww = document.getElementById("fez-home").clientWidth;
-    wh = document.getElementById("fez-home").clientHeight;
+    ww = document.getElementById("js-fez-home").clientWidth;
+    wh = document.getElementById("js-fez-home").clientHeight;
     camera.aspect = ww / wh;
     camera.updateProjectionMatrix();
     renderer.setSize(ww, wh);
@@ -367,7 +367,7 @@ export default () => {
     y: "-30%",
     ease: Power1.easeOut
   }, "+=1");
-  animTl.staggerFrom([".outro .copy h2",".outro .copy p"], 0.8, {
+  animTl.staggerFrom([".outro .copy h2", ".outro .copy p"], 0.8, {
     opacity: 0,
     y: "-50%",
     ease: Power1.easeOut

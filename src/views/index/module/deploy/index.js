@@ -1,6 +1,6 @@
-import temp from './index.hbs';
+import temp from './index.hbs'
 
-let tempData = {};
+let tempData = {}
 tempData.content1 = `
 <!DOCTYPE HTML>
 <html lang="zh-CN">
@@ -15,32 +15,26 @@ tempData.content1 = `
     <meta name="description" content="" />
     <meta name="apple-mobile-web-app-capable" content="no" />
     <meta name="format-detection" content="telephone=no">
-    <!-- inject:bower:css -->
-    <!-- bower架库样式 -->
+    <!-- inject:vendor:css -->
     <!-- endinject -->
-    <!-- inject:lib:css -->
-    <!-- 项目通用样式 -->
+    <!-- inject:common:css -->
     <!-- endinject -->
-    <!-- inject:views:css -->
-    <!-- 页面样式 -->
+    <!-- inject:page:css -->
     <!-- endinject -->
 </head>
 
 <body>
     <div id="app"></div>
-    <!-- inject:bower:js -->
-    <!-- bower框架库脚本 -->
+    <!-- inject:vendor:js -->
     <!-- endinject -->
-    <!-- inject:lib:js -->
-    <!-- 项目通用脚本 -->
+    <!-- inject:common:js -->
     <!-- endinject -->
-    <!-- inject:views:js -->
-    <!-- 页面脚本 -->
+    <!-- inject:page:js -->
     <!-- endinject -->
 </body>
 
 </html>
-`;
+`
 
 tempData.content2 = `
 <!DOCTYPE HTML>
@@ -56,7 +50,7 @@ tempData.content2 = `
     <meta name="description" content="" />
     <meta name="apple-mobile-web-app-capable" content="no" />
     <meta name="format-detection" content="telephone=no">
-    <!-- inject:bower:css -->
+    <!-- inject:vendor:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="bower_components/nprogress/nprogress.css">
@@ -66,10 +60,10 @@ tempData.content2 = `
     <link rel="stylesheet" href="bower_components/datatables.net-fixedcolumns-bs/css/fixedColumns.bootstrap.css">
     <link rel="stylesheet" href="bower_components/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.css">
     <!-- endinject -->
-    <!-- inject:lib:css -->
+    <!-- inject:common:css -->
     <link rel="stylesheet" href="static/css/common.css">
     <!-- endinject -->
-    <!-- inject:views:css -->
+    <!-- inject:page:css -->
     <link rel="stylesheet" href="static/css/index.css">
     <!-- endinject -->
 </head>
@@ -79,7 +73,7 @@ tempData.content2 = `
 //]]></script>
 
     <div id="app"></div>
-    <!-- inject:bower:js -->
+    <!-- inject:vendor:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/vue/dist/vue.js"></script>
@@ -95,19 +89,19 @@ tempData.content2 = `
     <script src="bower_components/datatables.net-fixedheader/js/dataTables.fixedHeader.js"></script>
     <script src="bower_components/echarts/dist/echarts.js"></script>
     <!-- endinject -->
-    <!-- inject:lib:js -->
+    <!-- inject:common:js -->
     <script src="lib/bootstrap-tabdrop.js"></script>
     <script src="lib/product-picker.js"></script>
     <script src="lib/q.js"></script>
     <!-- endinject -->
-    <!-- inject:views:js -->
+    <!-- inject:page:js -->
     <script src="lib/assign-index-china.js"></script>
     <script src="static/js/index.js"></script>
     <!-- endinject -->
 </body>
 
 </html>
-`;
+`
 
 tempData.content3 = `
 <!DOCTYPE HTML>
@@ -123,32 +117,32 @@ tempData.content3 = `
     <meta name="description" content="" />
     <meta name="apple-mobile-web-app-capable" content="no" />
     <meta name="format-detection" content="telephone=no">
-    <!-- inject:bower:css -->
+    <!-- inject:vendor:css -->
     <link rel="stylesheet" href="static/css/vendor-bootstrap.7707d705.css">
     <link rel="stylesheet" href="static/css/vendor-dataTables-bt.845ad633.css">
     <link rel="stylesheet" href="static/css/vendor-font-awesome.ead41108.css">
     <link rel="stylesheet" href="static/css/vendor.5aa8e503.css">
     <!-- endinject -->
-    <!-- inject:lib:css -->
+    <!-- inject:common:css -->
     <link rel="stylesheet" href="static/css/common.d3fcbc21.css">
     <!-- endinject -->
-    <!-- inject:views:css -->
+    <!-- inject:page:css -->
     <link rel="stylesheet" href="static/css/index.8edf9bab.css">
     <!-- endinject -->
 </head>
 
 <body>
     <div id="app"></div>
-    <!-- inject:bower:js -->
+    <!-- inject:vendor:js -->
     <script src="static/js/A-vendor-jquery-bootstrap-vue.7b774f3c.js"></script>
     <script src="static/js/vendor-dataTables.eb0e62bb.js"></script>
     <script src="static/js/vendor-echarts.bd6aefa4.js"></script>
     <!-- endinject -->
-    <!-- inject:lib:js -->
+    <!-- inject:common:js -->
     <script src="static/js/common-promise.34f596f9.js"></script>
     <script src="static/js/common.fb65cb00.js"></script>
     <!-- endinject -->
-    <!-- inject:views:js -->
+    <!-- inject:page:js -->
     <script src="static/js/assign-index-china.dbe62114.js"></script>
     <script src="static/js/index.832bfef8.js"></script>
     <!-- endinject -->
@@ -156,7 +150,7 @@ tempData.content3 = `
 
 </html>
 
-`;
+`
 
 tempData.content4 = `
 /**
@@ -168,8 +162,8 @@ tempData.content4 = `
  * 【打包顺序以文件配置先后降序排列-解决打包文件间的依赖关系】
  */
 "useInject": {
-    "bower": {
-        "available": true, //启用 bower 文件自动化注入
+    "vendor": {
+        "available": true, //启用 vendor 文件自动化注入
         "js": [{
             "target": "A-vendor-jquery-bootstrap-vue.js",
             "contain": ["**/jquery.js", "**/bootstrap.js", "**/vue.js"]
@@ -197,7 +191,7 @@ tempData.content4 = `
     /**
      * 【支持单个文件指定注入到某些页面（命名规则：assign-{页面名}-{页面名}-{other}】
      */
-    "lib": {
+    "common": {
         "available": true, //启用 公共 文件自动化注入
         "css": "*common*", //以common命名的样式文件会注入到所有的页面
         /**
@@ -211,13 +205,13 @@ tempData.content4 = `
     /**
      * 【支持src目录中的样式及编译后的逻辑脚本自动化注入到对应的页面】
      */
-    "views": true //启用 业务目录 文件自动化注入
+    "page": true //启用 业务目录 文件自动化注入
 }
-`;
+`
 
 
 const browsersyncAnimate = () => {
-  const services = $('#m-browsersync');
+  const services = $('#m-browsersync')
   if (services.length > 0) {
 
     services.waypoint(function(direction) {
@@ -225,84 +219,84 @@ const browsersyncAnimate = () => {
       if (direction === 'down' && !$(this.element).hasClass('animated')) {
 
 
-        let secLen = services.find('.to-animate').length;
-        let sec = parseInt((secLen * 200) + 400);
+        let secLen = services.find('.to-animate').length
+        let sec = parseInt((secLen * 200) + 400)
 
         setTimeout(() => {
           services.find('.to-animate').each(function(k) {
-            const el = $(this);
+            const el = $(this)
 
             setTimeout(() => {
-              el.addClass('fadeInUp animated');
-            }, k * 200, 'easeInOutExpo');
+              el.addClass('fadeInUp animated')
+            }, k * 200, 'easeInOutExpo')
 
-          });
-        }, 200);
+          })
+        }, 200)
 
         setTimeout(() => {
           services.find('.to-animate-2').each(function(k) {
-            const el = $(this);
+            const el = $(this)
 
             setTimeout(() => {
-              el.addClass('bounceIn animated');
-            }, k * 200, 'easeInOutExpo');
+              el.addClass('bounceIn animated')
+            }, k * 200, 'easeInOutExpo')
 
-          });
-        }, sec);
+          })
+        }, sec)
 
 
-        $(this.element).addClass('animated');
+        $(this.element).addClass('animated')
 
       }
-    }, { offset: '80%' });
+    }, { offset: '80%' })
 
   }
-};
+}
 
 /**
  * 部署模块动画
  */
 const sourceDeployAnimate = () => {
-  const trusted = $('#m-deploy');
+  const trusted = $('#js-m-deploy')
   if (trusted.length > 0) {
 
     trusted.waypoint(function(direction) {
 
       if (direction === 'down' && !$(this.element).hasClass('animated')) {
 
-        let secLen = trusted.find('.to-animate').length;
-        let sec = parseInt((secLen * 200) + 400);
+        let secLen = trusted.find('.to-animate').length
+        let sec = parseInt((secLen * 200) + 400)
 
         setTimeout(() => {
           trusted.find('.to-animate').each(function(k) {
-            var el = $(this);
+            var el = $(this)
 
             setTimeout(() => {
-              el.addClass('fadeIn animated');
-            }, k * 200, 'easeInOutExpo');
+              el.addClass('fadeIn animated')
+            }, k * 200, 'easeInOutExpo')
 
-          });
-        }, 200);
+          })
+        }, 200)
 
         setTimeout(() => {
           trusted.find('.to-animate-2').each(function(k) {
-            var el = $(this);
+            var el = $(this)
 
             setTimeout(() => {
-              el.addClass('bounceIn animated');
-            }, k * 200, 'easeInOutExpo');
+              el.addClass('bounceIn animated')
+            }, k * 200, 'easeInOutExpo')
 
-          });
-        }, sec);
+          })
+        }, sec)
 
 
-        $(this.element).addClass('animated');
+        $(this.element).addClass('animated')
 
       }
-    }, { offset: '80%' });
+    }, { offset: '80%' })
 
   }
-};
+}
 
 const testimonialCarousel = () => {
   $('.owl-carousel-fullwidth').owlCarousel({
@@ -314,12 +308,12 @@ const testimonialCarousel = () => {
     smartSpeed: 450,
     autoHeight: true,
     nav: true,
-  });
-};
+  })
+}
 
 export default () => {
-  $("#fez-source-deploy").html(temp(tempData));
-  sourceDeployAnimate();
-  browsersyncAnimate();
-  // testimonialCarousel();
+  $('#js-deploy').html(temp(tempData))
+  sourceDeployAnimate()
+  browsersyncAnimate()
+  // testimonialCarousel()
 }

@@ -1,37 +1,37 @@
-import temp from './index.hbs';
+import temp from './index.hbs'
 
-import blackHole from './black-hole';
+import blackHole from './black-hole'
 // Home
 const homeAnimate = () => {
-  if ($('#fez-home').length > 0) {
+  if ($('#js-fez-home').length > 0) {
 
-    $('#fez-home').waypoint(function(direction) {
+    $('#js-fez-home').waypoint(function(direction) {
 
       if (direction === 'down' && !$(this.element).hasClass('animated')) {
 
 
         setTimeout(() => {
-          $('#fez-home .to-animate').each(function(k) {
-            const el = $(this);
+          $('#js-fez-home .to-animate').each(function(k) {
+            const el = $(this)
 
             setTimeout(() => {
-              el.addClass('fadeInUp animated');
-            }, k * 200, 'easeInOutExpo');
+              el.addClass('fadeInUp animated')
+            }, k * 200, 'easeInOutExpo')
 
-          });
-        }, 100);
+          })
+        }, 100)
 
 
-        $(this.element).addClass('animated');
+        $(this.element).addClass('animated')
 
       }
-    }, { offset: '80%' });
+    }, { offset: '80%' })
 
   }
-};
+}
 
 export default () => {
-  $("#fez-home").html(temp());
-  homeAnimate();
-  blackHole();
+  $('#js-fez-home').html(temp())
+  homeAnimate()
+  blackHole()
 }

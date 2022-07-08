@@ -1,13 +1,13 @@
-import temp from './index.hbs';
+import temp from './index.hbs'
 
 const fezExtend = [{
   name: 'Babel',
   href: 'https://babeljs.io/',
   class: 'Babel'
 }, {
-  name: 'lodash',
-  href: 'http://lodashjs.com/',
-  class: 'lodash'
+  name: 'eslint',
+  href: 'http://eslint.cn/',
+  class: 'eslint'
 }, {
   name: 'LESS',
   href: 'http://www.bootcss.com/p/lesscss/',
@@ -58,7 +58,7 @@ const fezExtend = [{
   class: 'framework7'
 }, {
   name: 'React',
-  href: 'https://facebook.github.io/react/',
+  href: 'https://reactjs.org/',
   class: 'react'
 }, {
   name: 'vue',
@@ -72,11 +72,12 @@ const fezExtend = [{
   name: 'airbnb',
   href: 'https://github.com/airbnb/javascript',
   class: 'jsfengge'
-}];
+}]
 
 const exploreAnimate = () => {
 
-  const explore = $('#fez-expand');
+  const explore = $('#js-expand')
+
   if (explore.length > 0) {
 
     explore.waypoint(function(direction) {
@@ -84,70 +85,70 @@ const exploreAnimate = () => {
       if (direction === 'down' && !$(this.element).hasClass('animated')) {
         setTimeout(() => {
           explore.find('.to-animate').each(function(k) {
-            const el = $(this);
+            const el = $(this)
 
             setTimeout(() => {
-              el.addClass('fadeInUp animated');
-            }, k * 200, 'easeInOutExpo');
+              el.addClass('fadeInUp animated')
+            }, k * 200, 'easeInOutExpo')
 
-          });
-        }, 200);
+          })
+        }, 200)
 
         setTimeout(() => {
           explore.find('.to-animate-2').each(function(k) {
-            const el = $(this);
+            const el = $(this)
 
             setTimeout(() => {
-              el.addClass('bounceIn animated');
-            }, k * 200, 'easeInOutExpo');
+              el.addClass('bounceIn animated')
+            }, k * 200, 'easeInOutExpo')
 
-          });
-        }, 700);
+          })
+        }, 700)
 
         setTimeout(() => {
           explore.find('.to-animate-3').each(function(k) {
-            let el = $(this);
+            let el = $(this)
 
             setTimeout(() => {
-              el.addClass('fadeInRight animated');
-            }, k * 200, 'easeInOutExpo');
+              el.addClass('fadeInRight animated')
+            }, k * 200, 'easeInOutExpo')
 
-          });
-        }, 1000);
+          })
+        }, 1000)
 
 
-        $(this.element).addClass('animated');
+        $(this.element).addClass('animated')
 
       }
-    }, { offset: '80%' });
+    }, { offset: '80%' })
 
   }
-};
+}
 
 const counter = () => {
   $('.js-counter').countTo({
     formatter(value, options) {
-      return value.toFixed(options.decimals);
+      return value.toFixed(options.decimals)
     },
-  });
-};
+  })
+}
 
 const counterWayPoint = () => {
   if ($('#fez-counter-section').length > 0) {
     $('#fez-counter-section').waypoint(function(direction) {
 
       if (direction === 'down' && !$(this.element).hasClass('animated')) {
-        setTimeout(counter, 400);
-        $(this.element).addClass('animated');
+        setTimeout(counter, 400)
+        $(this.element).addClass('animated')
 
       }
-    }, { offset: '90%' });
+    }, { offset: '90%' })
   }
-};
+}
 
 export default () => {
-  $("#fez-expand").html(temp({ fezExtend: fezExtend }));
-  exploreAnimate();
-  counter();
-  counterWayPoint();
+  $('#js-expand').html(temp({ fezExtend: fezExtend }))
+  exploreAnimate()
+  counter()
+  counterWayPoint()
 }

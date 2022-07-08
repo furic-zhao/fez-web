@@ -1,0 +1,42 @@
+/**
+ * 核心理念
+ */
+
+.core-features {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: #f2f2f2;
+  .core-picture {
+    background-image: url(../../images/index/main-workflow.jpg);
+  }
+  .browsersync-picture {
+    background-image: url(../../images/index/browsersync/bg.jpg);
+  }
+  .grid2 {
+    width: 50%;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    .core-f {
+      padding: 40px;
+      .core {
+        margin-bottom: 30px;
+        i {
+          float: left;
+          color: #00ADB5;
+          font-size: 28px;
+        }
+        .fez-post {
+          padding-left: 50px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:768px) {
+  .core-features .grid2 {
+    width: 100%;
+  }
+}

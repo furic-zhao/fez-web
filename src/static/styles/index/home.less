@@ -1,0 +1,94 @@
+/**
+ * 页面首屏
+ */
+
+.section-home {
+  canvas {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+  }
+
+  .intro {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1200px;
+    max-width: 100%;
+  }
+
+  .outro {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1200px;
+    max-width: 100%;
+    pointer-events: none;
+  }
+  background-image: url(../../images/index/home.jpg);
+  background-color: transparent;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  background-color: #e6e6e6;
+  color: #fff;
+  height: 620px;
+  .inner-item {
+    text-align: center;
+    padding-top: 150px;
+  }
+  .text-wrap {
+    height: 620px;
+    display: table;
+    width: 100%;
+    position: relative;
+    z-index: 4;
+  }
+  .text-inner {
+    display: table-cell;
+    vertical-align: middle;
+    h1 {
+      font-size: 48px;
+      text-transform: uppercase;
+      color: white;
+      margin: 0 0 20px 0;
+      font-weight: 400;
+      line-height: 58px;
+      span {
+        color: #FA5555;
+      }
+    }
+    h2 {
+      color: rgba(255, 255, 255, 0.8);
+      margin: 0 0 30px 0;
+    }
+    .call-to-action {
+      display: block;
+      width: 100%;
+    }
+  }
+  .gradient {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.3);
+  }
+}
+
+@media screen and (max-width:768px) {
+  .section-home {
+    .text-inner {
+      h2 {
+        font-size: 24px;
+      }
+    }
+  }
+}

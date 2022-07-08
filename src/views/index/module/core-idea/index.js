@@ -1,46 +1,46 @@
-import Temp from './index.hbs';
+import Temp from './index.hbs'
 
 const trustedAnimate = () => {
-  const trusted = $('#m-modularity');
+  const trusted = $('#m-modularity')
   if (trusted.length > 0) {
 
     trusted.waypoint(function(direction) {
 
       if (direction === 'down' && !$(this.element).hasClass('animated')) {
 
-        let secLen = trusted.find('.to-animate').length;
-        let sec = parseInt((secLen * 200) + 400);
+        let secLen = trusted.find('.to-animate').length
+        let sec = parseInt((secLen * 200) + 400)
 
         setTimeout(() => {
           trusted.find('.to-animate').each(function(k) {
-            var el = $(this);
+            var el = $(this)
 
             setTimeout(() => {
-              el.addClass('fadeIn animated');
-            }, k * 200, 'easeInOutExpo');
+              el.addClass('fadeIn animated')
+            }, k * 200, 'easeInOutExpo')
 
-          });
-        }, 200);
+          })
+        }, 200)
 
         setTimeout(() => {
           trusted.find('.to-animate-2').each(function(k) {
-            var el = $(this);
+            var el = $(this)
 
             setTimeout(() => {
-              el.addClass('bounceIn animated');
-            }, k * 200, 'easeInOutExpo');
+              el.addClass('bounceIn animated')
+            }, k * 200, 'easeInOutExpo')
 
-          });
-        }, sec);
-        $(this.element).addClass('animated');
+          })
+        }, sec)
+        $(this.element).addClass('animated')
       }
-    }, { offset: '80%' });
+    }, { offset: '80%' })
 
   }
-};
+}
 
 const blogAnimate = () => {
-  const footer = $('#m-promise');
+  const footer = $('#m-promise')
   if (footer.length > 0) {
 
     footer.waypoint(function(direction) {
@@ -49,22 +49,22 @@ const blogAnimate = () => {
 
         setTimeout(() => {
           footer.find('.to-animate').each(function(k) {
-            var el = $(this);
+            var el = $(this)
 
             setTimeout(() => {
-              el.addClass('fadeIn animated');
-            }, k * 200, 'easeInOutExpo');
+              el.addClass('fadeIn animated')
+            }, k * 200, 'easeInOutExpo')
 
-          });
-        }, 200);
+          })
+        }, 200)
 
-        $(this.element).addClass('animated');
+        $(this.element).addClass('animated')
 
       }
-    }, { offset: '80%' });
+    }, { offset: '80%' })
 
   }
-};
+}
 
 const renderData = {
   moduleViews: `
@@ -73,41 +73,41 @@ views
 │   ├── index.html
 │   ├── index.js
 │   └── module
-│       ├── module1
+│       ├── mod1
 │       │   ├── index.js
 │       │   ├── index.hbs
 │       │   └── service.js
-│       ├── module2
+│       ├── mod2
 │       │   ├── index.vue
 │       │   └── service.js
-│       └── module3
+│       └── mod3
 │           ├── index.js
-│           ├── module3-1
+│           ├── mod3-1
 │           │   ├── index.js
 │           │   └── service.js
-│           └── module3-2
+│           └── mod3-2
 │               ├── index.vue
 │               └── service.js
 └── page2
     ├── index.html
     ├── index.js
     └── module
-        ├── module1
-        ├── module2
-        └── module3
+        ├── mod1
+        ├── mod2
+        └── mod3
     `,
   moduleStyles: `
 static
 └── styles
     ├── page1
-    │   ├── module1.less
-    │   ├── module2.less
-    │   └── module3.less
+    │   ├── mod1.less
+    │   ├── mod2.less
+    │   └── mod3.less
     ├── page1.less
     ├── page2
-    │   ├── module1.scss
-    │   ├── module2.scss
-    │   └── module3.scss
+    │   ├── mod1.scss
+    │   ├── mod2.scss
+    │   └── mod3.scss
     └── page2.scss
     `,
   moduleImages: `
@@ -126,32 +126,32 @@ static
   promiseService: `
 //文件：service.js
 
-import Api from 'api-ajax';
+import Api from 'views/public/api-ajax'
 
 export default {
-    productList: (params = {}) => {
+    productList(params = {}) {
         return new Promise((resolve, reject) => {
             Api.get(url, params)
                 .then((data) => {
                     //... 处理 data 为需要的格式
-                    resolve(data);
+                    resolve(data)
                 }, function(error) {
-                    reject(error);
-                });
-        });
+                    reject(error)
+                })
+        })
     },
-    productNameById: (id) => {
+    productNameById(id) {
         return new Promise((resolve, reject) => {
             let data = ... //根据 id 处理 data 数据并重新组装
-            resolve(data);
-        });
+            resolve(data)
+        })
     }
 }
     `,
   promiseModule: `
 //文件：module.js
 
-import Service from 'service';
+import Service from './service'
 
 Service.productList(params)
     .then((data) => {
@@ -159,7 +159,7 @@ Service.productList(params)
         //渲染并处理 data 数据
         //从 data 中获取id 传给下一个函数执行
 
-        return Service.productNameById(id);
+        return Service.productNameById(id)
     }, function(error) {
 
         //处理 error
@@ -173,9 +173,9 @@ Service.productList(params)
         // 处理error
     })
     `
-};
+}
 export default () => {
-  $("#fez-trusted").html(Temp(renderData));
-  trustedAnimate();
-  blogAnimate();
+  $('#js-core-idea').html(Temp(renderData))
+  trustedAnimate()
+  blogAnimate()
 }
